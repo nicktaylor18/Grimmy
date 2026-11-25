@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://wy60an823iii" path="res://Assets/Grass n Dirt Tileset.png" id="1_f6udf"]
 [ext_resource type="PackedScene" uid="uid://ujxn6e7u8u2m" path="res://Scene/Grimmy.tscn" id="2_sblpm"]
+[ext_resource type="PackedScene" uid="uid://c76b5tj6wxhw8" path="res://Scene/House.tscn" id="3_r34rm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sblpm"]
 texture = ExtResource("1_f6udf")
@@ -360,3 +361,6 @@ rendering_quadrant_size = 64
 
 [node name="Grimmy" parent="." unique_id=1119564623 instance=ExtResource("2_sblpm")]
 position = Vector2(338, 154)
+
+[node name="House" parent="." unique_id=114814853 instance=ExtResource("3_r34rm")]
+position = Vector2(840, 373)

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dqpfjtbfq0w0j"]
 
+[ext_resource type="Script" uid="uid://gw4hmv41kpm6" path="res://Scene/villager.gd" id="1_1fugk"]
 [ext_resource type="Texture2D" uid="uid://ba5qgcjlshtot" path="res://Assets/Villager_idle-Sheet.png" id="1_06xtj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lr84n"]
@@ -48,7 +49,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_xloqf")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"idle",
 "speed": 8.0
 }]
 
@@ -57,10 +58,12 @@ radius = 27.0
 height = 58.0
 
 [node name="Villager" type="CharacterBody2D" unique_id=845430500]
+script = ExtResource("1_1fugk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=915449461]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_dsyr7")
-frame_progress = 0.9220156
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=811776513]
 position = Vector2(0, 24)

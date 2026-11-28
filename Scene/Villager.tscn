@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dqpfjtbfq0w0j"]
+
+[ext_resource type="Texture2D" uid="uid://ba5qgcjlshtot" path="res://Assets/Villager_idle-Sheet.png" id="1_06xtj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr84n"]
+atlas = ExtResource("1_06xtj")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2naw6"]
+atlas = ExtResource("1_06xtj")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx7df"]
+atlas = ExtResource("1_06xtj")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ard0e"]
+atlas = ExtResource("1_06xtj")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_waebi"]
+atlas = ExtResource("1_06xtj")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xloqf"]
+atlas = ExtResource("1_06xtj")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dsyr7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lr84n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2naw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vx7df")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ard0e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_waebi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xloqf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tj3jp"]
+radius = 27.0
+height = 58.0
+
+[node name="Villager" type="CharacterBody2D" unique_id=845430500]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=915449461]
+sprite_frames = SubResource("SpriteFrames_dsyr7")
+frame_progress = 0.9220156
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=811776513]
+position = Vector2(0, 24)
+shape = SubResource("CapsuleShape2D_tj3jp")

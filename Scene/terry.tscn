@@ -205,10 +205,12 @@ animations = [{
 "speed": 13.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tj3jp"]
-size = Vector2(45, 29)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1xcnr"]
+radius = 17.0
+height = 62.0
 
-[node name="Grimmy" type="CharacterBody2D" unique_id=1119564623]
+[node name="Terry" type="CharacterBody2D" unique_id=1119564623]
+collision_layer = 2
 script = ExtResource("1_wwj2w")
 walk_speed = 150
 run_speed = 300
@@ -220,5 +222,6 @@ animation = &"idle"
 frame_progress = 0.7826606
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=544244351]
-position = Vector2(-7.5, 27.5)
-shape = SubResource("RectangleShape2D_tj3jp")
+position = Vector2(-1, 20)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_1xcnr")
